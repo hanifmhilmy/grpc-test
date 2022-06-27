@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "github.com/grpc-test/api;api";
+
+message Input {
+    string name = 1;
+}
+
+message Output {
+    string name = 1;
+}
+
+service Hello {
+    rpc Hello(Input) returns (Output) {}
+}
